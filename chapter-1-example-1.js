@@ -1,4 +1,6 @@
-function templateLiteral() {
-    return `The result is: ${100 / 2}`;
+function templateLiteralExample() {
+    console.log(`The result is: ${100 / 2}`);
 }
-module.exports = templateLiteral;
+module.exports = templateLiteralExample;
+
+templateLiteralExample();
