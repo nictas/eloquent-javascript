@@ -7,3 +7,7 @@ test('Luke is equal to Luke', () => {
 test('Luke is not equal to Leia', () => {
   expect(areEqual('Luke', 'Leia')).toBe(false);
 });
+
+test('NaN is not equal to NaN', () => {
+  expect(areEqual(NaN, NaN)).toBe(false);
+});
