@@ -1,0 +1,22 @@
+function printChessBoard(size) {
+    if (typeof size != 'number' || Number.isNaN(size) || !Number.isFinite(size)) {
+        return;
+    }
+    let line1 = generateChessBoardLine(size, ' ');
+    let line2 = generateChessBoardLine(size, '#');
+    for (let i = 0; i < size; i++) {
+        console.log(i % 2 == 0 ? line1 : line2);
+    }
+}
+
+function generateChessBoardLine(size, startingCharacter) {
+    let line = '';
+    for (let i = 0, symbol = startingCharacter; i < size; i++, symbol = symbol == ' ' ? '#' : ' ') {
+        line += symbol;
+    }
+    return line;
+}
+
+module.exports = printChessBoard;
+
+printChessBoard(8);
