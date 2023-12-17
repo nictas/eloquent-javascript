@@ -11,3 +11,7 @@ test('false is not precisely equal to 0', () => {
 test('false is not precisely equal to an empty string', () => {
   expect(arePreciselyEqual(false, '')).toBe(false);
 });
+
+test('null is not precisely equal to undefined', () => {
+  expect(arePreciselyEqual(null, undefined)).toBe(false);
+});
