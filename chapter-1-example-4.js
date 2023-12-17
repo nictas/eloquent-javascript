@@ -1,11 +1,11 @@
-function isEqual(a, b) {
+function areEqual(a, b) {
     return a == b;
 }
-module.exports = isEqual;
+module.exports = areEqual;
 
-console.log('Luke is equal to Luke: ' + isEqual('Luke', 'Luke'));
-console.log('Luke is equal to Leia: ' + isEqual('Luke', 'Leia'));
-console.log('NaN is equal to NaN: ' + isEqual(NaN, NaN));
-console.log('undefined is equal to null: ' + isEqual(undefined, null));
-console.log('null is equal to 0: ' + isEqual(null, 0));
-console.log('undefined is equal to 0: ' + isEqual(undefined, 0));
+console.log('Luke is equal to Luke: ' + areEqual('Luke', 'Luke'));
+console.log('Luke is equal to Leia: ' + areEqual('Luke', 'Leia'));
+console.log('NaN is equal to NaN: ' + areEqual(NaN, NaN));
+console.log('undefined is equal to null: ' + areEqual(undefined, null));
+console.log('null is equal to 0: ' + areEqual(null, 0));
+console.log('undefined is equal to 0: ' + areEqual(undefined, 0));
