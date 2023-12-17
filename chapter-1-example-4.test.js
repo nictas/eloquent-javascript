@@ -15,3 +15,11 @@ test('NaN is not equal to NaN', () => {
 test('undefined is equal to null', () => {
   expect(areEqual(undefined, null)).toBe(true);
 });
+
+test('null is not equal to 0', () => {
+  expect(areEqual(null, 0)).toBe(false);
+});
+
+test('undefined is not equal to 0', () => {
+  expect(areEqual(undefined, 0)).toBe(false);
+});
