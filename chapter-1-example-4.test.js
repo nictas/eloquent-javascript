@@ -11,3 +11,7 @@ test('Luke is not equal to Leia', () => {
 test('NaN is not equal to NaN', () => {
   expect(areEqual(NaN, NaN)).toBe(false);
 });
+
+test('undefined is equal to null', () => {
+  expect(areEqual(undefined, null)).toBe(true);
+});
