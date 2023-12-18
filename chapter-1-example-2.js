@@ -4,4 +4,6 @@ function typeOfExample() {
 }
 module.exports = typeOfExample;
 
-typeOfExample();
+if (require.main === module) {
+    typeOfExample();
+}

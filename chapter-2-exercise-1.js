@@ -8,4 +8,6 @@ function printTriangle(numberOfLines) {
 }
 module.exports = printTriangle;
 
-printTriangle(7);
+if (require.main === module) {
+    printTriangle(7);
+}

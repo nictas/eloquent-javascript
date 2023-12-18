@@ -3,4 +3,6 @@ function isLesserThan(a, b) {
 }
 module.exports = isLesserThan;
 
-console.log('Luke is lesser than Leia: '  + isLesserThan('Luke', 'Leia'))
+if (require.main === module) {
+    console.log('Luke is lesser than Leia: ' + isLesserThan('Luke', 'Leia'));
+}

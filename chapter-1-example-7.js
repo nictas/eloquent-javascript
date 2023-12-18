@@ -9,4 +9,6 @@ function shortCircuitingExample() {
 }
 module.exports = shortCircuitingExample;
 
-shortCircuitingExample();
+if (require.main === module) {
+    shortCircuitingExample();
+}

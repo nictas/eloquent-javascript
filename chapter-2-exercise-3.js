@@ -19,4 +19,6 @@ function generateChessBoardLine(size, startingCharacter) {
 
 module.exports = printChessBoard;
 
-printChessBoard(8);
+if (require.main === module) {
+    printChessBoard(8);
+}

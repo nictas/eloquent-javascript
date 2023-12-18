@@ -15,4 +15,6 @@ function fizzBuzz(limit) {
 }
 module.exports = fizzBuzz;
 
-fizzBuzz(100);
+if (require.main === module) {
+    fizzBuzz(100);
+}

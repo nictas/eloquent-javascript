@@ -3,4 +3,6 @@ function templateLiteralExample() {
 }
 module.exports = templateLiteralExample;
 
-templateLiteralExample();
+if (require.main === module) {
+    templateLiteralExample();
+}

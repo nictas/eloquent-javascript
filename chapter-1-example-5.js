@@ -7,4 +7,6 @@ function typeConversionExample() {
 }
 module.exports = typeConversionExample;
 
-typeConversionExample();
+if (require.main === module) {
+    typeConversionExample();
+}

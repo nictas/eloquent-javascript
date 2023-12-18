@@ -6,4 +6,6 @@ function plotTwist() {
 }
 module.exports = plotTwist;
 
-plotTwist();
+if (require.main === module) {
+    plotTwist();
+}
