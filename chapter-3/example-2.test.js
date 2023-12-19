@@ -1,4 +1,4 @@
-const example = require('./chapter-3-example-2');
+const example = require('./example-2');
 
 describe('closureVar function', () => {
   beforeEach(() => {

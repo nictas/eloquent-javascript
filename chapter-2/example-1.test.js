@@ -1,4 +1,4 @@
-const plotTwist = require('./chapter-2-example-1');
+const plotTwist = require('./example-1');
 
 test(':O', () => {
   const logSpy = jest.spyOn(console, 'log');

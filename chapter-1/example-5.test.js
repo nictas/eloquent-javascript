@@ -1,4 +1,4 @@
-const typeConversionExample = require('./chapter-1-example-5');
+const typeConversionExample = require('./example-5');
 
 test('Type conversion is weird in JavaScript', () => {
   const logSpy = jest.spyOn(console, 'log');

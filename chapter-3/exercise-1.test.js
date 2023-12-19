@@ -1,4 +1,4 @@
-const min = require('./chapter-3-exercise-1');
+const min = require('./exercise-1');
 
 test('min returns the minimum value of 2 numbers', () => {
   expect(min(4, 2)).toBe(2);

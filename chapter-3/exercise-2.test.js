@@ -1,4 +1,4 @@
-const isEven = require('./chapter-3-exercise-2');
+const isEven = require('./exercise-2');
 
 test('isEven returns true for positive even numbers and false for odd ones', () => {
   expect(isEven(2)).toBe(true);

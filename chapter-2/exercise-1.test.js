@@ -1,4 +1,4 @@
-const printTriangle = require('./chapter-2-exercise-1');
+const printTriangle = require('./exercise-1');
 
 test('Printing a triangle on 2 lines works', () => {
   const logSpy = jest.spyOn(console, 'log');

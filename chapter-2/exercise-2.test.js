@@ -1,4 +1,4 @@
-const fizzBuzz = require('./chapter-2-exercise-2');
+const fizzBuzz = require('./exercise-2');
 
 test('FizzBuzz with a limit of 5', () => {
   const logSpy = jest.spyOn(console, 'log');

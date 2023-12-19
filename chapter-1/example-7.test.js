@@ -1,4 +1,4 @@
-const shortCircuitingExample = require('./chapter-1-example-7');
+const shortCircuitingExample = require('./example-7');
 
 test('Short circuiting can be used for default values', () => {
   const logSpy = jest.spyOn(console, 'log');

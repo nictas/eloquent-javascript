@@ -1,4 +1,4 @@
-const arePreciselyEqual = require('./chapter-1-example-6');
+const arePreciselyEqual = require('./example-6');
 
 test('0 is precisely equal to 0', () => {
   expect(arePreciselyEqual(0, 0)).toBe(true);

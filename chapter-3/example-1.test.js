@@ -1,4 +1,4 @@
-const example = require('./chapter-3-example-1');
+const example = require('./example-1');
 
 test('Function with optional parameter works', () => {
   expect(example.minus(4)).toBe(-4);

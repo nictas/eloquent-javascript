@@ -1,4 +1,4 @@
-const printChessBoard = require('./chapter-2-exercise-3');
+const printChessBoard = require('./exercise-3');
 
 test('Printing a 3x3 chess board works', () => {
   const logSpy = jest.spyOn(console, 'log');

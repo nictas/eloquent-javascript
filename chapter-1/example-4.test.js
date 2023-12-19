@@ -1,4 +1,4 @@
-const areEqual = require('./chapter-1-example-4');
+const areEqual = require('./example-4');
 
 test('Luke is equal to Luke', () => {
   expect(areEqual('Luke', 'Luke')).toBe(true);

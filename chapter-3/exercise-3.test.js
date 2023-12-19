@@ -1,4 +1,4 @@
-const exercise = require('./chapter-3-exercise-3');
+const exercise = require('./exercise-3');
 
 test('countBs returns the correct number of Bs in a string', () => {
   expect(exercise.countBs("Bobbing boats dotted the tranquil bay, bathed in the golden hues of the setting sun.")).toBe(6);
