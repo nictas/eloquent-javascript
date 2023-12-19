@@ -1,12 +1,13 @@
+const typeUtils = require('../type-utils');
+
 const min = (a, b) => {
-    const isNumber = number => typeof number == 'number' && !Number.isNaN(number);
-    if (!isNumber(a) && !isNumber(b)) {
+    if (!typeUtils.isNumber(a) && !typeUtils.isNumber(b)) {
         return NaN;
     }
-    if (!isNumber(a)) {
+    if (!typeUtils.isNumber(a)) {
         return b;
     }
-    if (!isNumber(b)) {
+    if (!typeUtils.isNumber(b)) {
         return a;
     }
     return a < b ? a : b;

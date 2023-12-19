@@ -1,23 +1,24 @@
+const typeUtils = require('../type-utils');
+
 const isEven = number => {
-    const isEvenRecursive = number => {
-        if (number === 0) {
-            return true;
-        }
-        if (number === 1) {
-            return false;
-        }
-        return isEvenRecursive(number - 2);
-    }
-    if (!isFiniteNumber(number) || !isInt(number)) {
+    if (!typeUtils.isFiniteNumber(number) || !isInteger(number)) {
         return false;
     }
     return isEvenRecursive(Math.abs(number));
 }
 
-const isFiniteNumber = number => typeof number == 'number' && !Number.isNaN(number) && Number.isFinite(number);
-
-const isInt = number => {
+const isInteger = number => {
     return number % 1 === 0;
+}
+
+const isEvenRecursive = number => {
+    if (number === 0) {
+        return true;
+    }
+    if (number === 1) {
+        return false;
+    }
+    return isEvenRecursive(number - 2);
 }
 
 module.exports = isEven;

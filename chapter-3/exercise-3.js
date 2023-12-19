@@ -1,9 +1,11 @@
+const typeUtils = require('../type-utils');
+
 const countBs = string => {
     return countCharacter(string, 'b');
 }
 
 const countCharacter = (string, character) => {
-    if (!isString(string) || !isString(character) || character.length != 1) {
+    if (!typeUtils.isString(string) || !typeUtils.isString(character) || character.length != 1) {
         return 0;
     }
     character = character.toUpperCase();
@@ -15,8 +17,6 @@ const countCharacter = (string, character) => {
     }
     return count;
 }
-
-const isString = string => typeof string == 'string' || string instanceof String;
 
 module.exports = { countBs, countCharacter };
 

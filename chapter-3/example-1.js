@@ -31,10 +31,10 @@ const answerToLifeUniverseEverything = () => 42;
 module.exports = { minus, square, squareNested, squareLambda, pow, answerToLifeUniverseEverything };
 
 if (require.main === module) {
-    console.log(square(4));
-    console.log(squareNested(4));
-    console.log(squareLambda(4));
-    console.log(pow(4, 3));
-    console.log(pow(4));
-    console.log(answerToLifeUniverseEverything());
+    console.log(`square(4): ${square(4)}`);
+    console.log(`squareNested(4): ${squareNested(4)}`);
+    console.log(`squareLambda(4): ${squareLambda(4)}`);
+    console.log(`pow(4, 3): ${pow(4, 3)}`);
+    console.log(`pow(4): ${pow(4)}`);
+    console.log(`answerToLifeUniverseEverything(): ${answerToLifeUniverseEverything()}`);
 }
