@@ -1,5 +1,7 @@
+const typeUtils = require('../type-utils');
+
 function printChessBoard(size) {
-    if (typeof size != 'number' || Number.isNaN(size) || !Number.isFinite(size)) {
+    if (!typeUtils.isFiniteNumber(size)) {
         return;
     }
     let line1 = generateChessBoardLine(size, ' ');

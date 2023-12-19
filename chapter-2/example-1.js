@@ -4,6 +4,7 @@ function plotTwist() {
     const message = "I'm your father!"
     console.log(greeting + ' ' + name + '. ' + message);
 }
+
 module.exports = plotTwist;
 
 if (require.main === module) {

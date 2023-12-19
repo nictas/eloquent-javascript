@@ -1,5 +1,7 @@
+const typeUtils = require('../type-utils');
+
 function fizzBuzz(limit) {
-    if (typeof limit != 'number' || Number.isNaN(limit) || !Number.isFinite(limit)) {
+    if (!typeUtils.isFiniteNumber(limit)) {
         return;
     }
     for (let i = 1; i <= limit; i++) {
@@ -13,6 +15,7 @@ function fizzBuzz(limit) {
         console.log(message === '' ? i : message);
     }
 }
+
 module.exports = fizzBuzz;
 
 if (require.main === module) {
