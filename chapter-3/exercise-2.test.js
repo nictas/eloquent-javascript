@@ -19,7 +19,7 @@ test('isEven returns false for fractions', () => {
   expect(isEven(0.01)).toBe(false);
 });
 
-test('isEven return false for values other than numbers', () => {
+test('isEven returns false for non-numeric values', () => {
   expect(isEven(+Infinity)).toBe(false);
   expect(isEven(-Infinity)).toBe(false);
   expect(isEven(NaN)).toBe(false);

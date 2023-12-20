@@ -32,7 +32,7 @@ test('FizzBuzz with a limit of 10', () => {
   logSpy.mockRestore();
 });
 
-test("Passing something other than a number doesn't lead to an error", () => {
+test("Passing non-numeric values doesn't lead to an error", () => {
   const logSpy = jest.spyOn(console, 'log');
   fizzBuzz('ab');
   expect(logSpy).toHaveBeenCalledTimes(0);
@@ -47,7 +47,7 @@ test("Passing something other than a number doesn't lead to an error", () => {
   logSpy.mockRestore();
 });
 
-test("Passing infinity doesn't lead to an infinite loop", () => {
+test("Passing infinity doesn't lead to an error", () => {
   const logSpy = jest.spyOn(console, 'log');
   fizzBuzz(+Infinity);
   expect(logSpy).toHaveBeenCalledTimes(0);
