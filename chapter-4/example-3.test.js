@@ -1,0 +1,35 @@
+const stringsExample = require('./example-3');
+
+test('Strings work as expected', () => {
+  const logSpy = jest.spyOn(console, 'log');
+  stringsExample();
+  expect(logSpy).toHaveBeenNthCalledWith(1, 'string:  bobbing boats \t\n');
+  expect(logSpy).toHaveBeenNthCalledWith(2, 'string.slice(4): bing boats \t\n');
+  expect(logSpy).toHaveBeenNthCalledWith(3, 'string.slice(4, 8): bing');
+  expect(logSpy).toHaveBeenNthCalledWith(4, "string.indexOf('b'): 1");
+  expect(logSpy).toHaveBeenNthCalledWith(5, "string.indexOf('g'): 7");
+  expect(logSpy).toHaveBeenNthCalledWith(6, "string.indexOf('bing'): 4");
+  expect(logSpy).toHaveBeenNthCalledWith(7, "string.lastIndexOf('b'): 9");
+  expect(logSpy).toHaveBeenNthCalledWith(8, "string.lastIndexOf('g'): 7");
+  expect(logSpy).toHaveBeenNthCalledWith(9, "string.trim(): bobbing boats");
+  expect(logSpy).toHaveBeenNthCalledWith(10, "'7'.padStart(3, '0'): 007");
+  expect(logSpy).toHaveBeenNthCalledWith(11, "string.trim().split(' '): bobbing,boats");
+  expect(logSpy).toHaveBeenNthCalledWith(12, "string.trim().split(' ').join('-'): bobbing-boats");
+  expect(logSpy).toHaveBeenNthCalledWith(13, "'ho'.repeat(3): hohoho");
+  expect(logSpy).toHaveBeenNthCalledWith(14, "string[1]: b");
+  expect(logSpy).toHaveBeenNthCalledWith(15, "string[7]: g");
+  expect(logSpy).toHaveBeenNthCalledWith(16, "b");
+  expect(logSpy).toHaveBeenNthCalledWith(17, "o");
+  expect(logSpy).toHaveBeenNthCalledWith(18, "b");
+  expect(logSpy).toHaveBeenNthCalledWith(19, "b");
+  expect(logSpy).toHaveBeenNthCalledWith(20, "i");
+  expect(logSpy).toHaveBeenNthCalledWith(21, "n");
+  expect(logSpy).toHaveBeenNthCalledWith(22, "g");
+  expect(logSpy).toHaveBeenNthCalledWith(23, " ");
+  expect(logSpy).toHaveBeenNthCalledWith(24, "b");
+  expect(logSpy).toHaveBeenNthCalledWith(25, "o");
+  expect(logSpy).toHaveBeenNthCalledWith(26, "a");
+  expect(logSpy).toHaveBeenNthCalledWith(27, "t");
+  expect(logSpy).toHaveBeenNthCalledWith(28, "s");
+  logSpy.mockRestore();
+});
