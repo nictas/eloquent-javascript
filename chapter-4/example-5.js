@@ -4,6 +4,28 @@ const addEntry = function (events, squirrel) {
     journal.push({ events, squirrel }); // Shorthand for: { events: events, squirrel: squirrel }
 }
 
+const computeCorrelations = function () {
+    let observations = computeObservations();
+    let correlations = {};
+    for (let event of Object.keys(observations)) {
+        correlations[event] = roundWithPrecision(computePhi(observations[event]), 4);
+    }
+    return correlations;
+}
+
+const roundWithPrecision = function (number, precision) {
+    let multiplier = Math.pow(10, precision);
+    return Math.ceil(number * multiplier) / multiplier;
+}
+
+const computePhi = function (observations) {
+    return (observations[3] * observations[0] - observations[2] * observations[1]) /
+        Math.sqrt((observations[2] + observations[3]) *
+            (observations[0] + observations[1]) *
+            (observations[0] + observations[2]) *
+            (observations[1] + observations[3]));
+}
+
 const computeObservations = function () {
     let events = computeEvents();
     let observations = initializeObservations(events);
@@ -53,8 +75,8 @@ const computeEvents = function () {
     return events.sort();
 }
 
-module.exports = { addEntry, computeObservations, computeEvents };
+module.exports = { addEntry, computeCorrelations, computeObservations, computeEvents };
 
 if (require.main === module) {
-    // TODO
+    console.log("Look at the test. ^^");
 }

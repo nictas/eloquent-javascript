@@ -151,6 +151,35 @@ const journalObservations = {
   "work": [27, 3, 58, 2]
 };
 
+const journalCorrelations = {
+  "beer": -0.0523,
+  "bread": -0.0757,
+  "brushed teeth": -0.3805,
+  "brussel sprouts": -0.0523,
+  "candy": 0.1297,
+  "carrot": 0.0141,
+  "cauliflower": -0.0808,
+  "computer": 0.0686,
+  "cycling": -0.0808,
+  "dentist": -0.0365,
+  "exercise": 0.0686,
+  "ice cream": -0.0808,
+  "lasagna": 0.0809,
+  "lettuce": -0.0704,
+  "nachos": -0.0704,
+  "peanuts": 0.5903,
+  "pizza": 0.0686,
+  "potatoes": -0.0857,
+  "pudding": -0.0648,
+  "reading": 0.1107,
+  "running": -0.0905,
+  "spaghetti": 0.2426,
+  "television": -0.0808,
+  "touched tree": -0.0808,
+  "weekend": 0.1372,
+  "work": -0.1371
+};
+
 describe('Weresquirrel', () => {
   beforeAll(() => {
     for (let entry of journalEntries) {
@@ -164,5 +193,10 @@ describe('Weresquirrel', () => {
 
   test('computeObservations works as expected', () => {
     expect(journal.computeObservations()).toStrictEqual(journalObservations);
+  });
+
+  test('computeCorrelations works as expected', () => {
+    expect(journal.computeCorrelations()["beer"]).toStrictEqual(journalCorrelations["beer"]);
+    console.log(JSON.stringify(journal.computeCorrelations()));
   });
 });
