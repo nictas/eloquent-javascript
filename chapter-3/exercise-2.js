@@ -1,7 +1,7 @@
 const typeUtils = require('../type-utils');
 
 const isEven = number => {
-    if (!typeUtils.isInteger(number)) {
+    if (!typeUtils.isInt(number)) {
         return false;
     }
     return isEvenRecursive(Math.abs(number));

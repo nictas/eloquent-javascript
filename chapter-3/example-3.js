@@ -1,7 +1,7 @@
 const typeUtils = require('../type-utils');
 
 const findPath = function (target) {
-    if (!typeUtils.isInteger(target)) {
+    if (!typeUtils.isInt(target)) {
         return null;
     }
     return findPathRecursive(1, target, '1');
