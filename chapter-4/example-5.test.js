@@ -122,8 +122,37 @@ const journalEvents = [
   "work"
 ];
 
+const journalObservations = {
+  "beer": [81, 5, 4, 0],
+  "bread": [77, 5, 8, 0],
+  "brushed teeth": [21, 5, 64, 0],
+  "brussel sprouts": [81, 5, 4, 0],
+  "candy": [80, 4, 5, 1],
+  "carrot": [70, 4, 15, 1],
+  "cauliflower": [76, 5, 9, 0],
+  "computer": [76, 4, 9, 1],
+  "cycling": [76, 5, 9, 0],
+  "dentist": [83, 5, 2, 0],
+  "exercise": [76, 4, 9, 1],
+  "ice cream": [76, 5, 9, 0],
+  "lasagna": [77, 4, 8, 1],
+  "lettuce": [78, 5, 7, 0],
+  "nachos": [78, 5, 7, 0],
+  "peanuts": [77, 0, 8, 5],
+  "pizza": [76, 4, 9, 1],
+  "potatoes": [75, 5, 10, 0],
+  "pudding": [79, 5, 6, 0],
+  "reading": [79, 4, 6, 1],
+  "running": [74, 5, 11, 0],
+  "spaghetti": [78, 3, 7, 2],
+  "television": [76, 5, 9, 0],
+  "touched tree": [76, 5, 9, 0],
+  "weekend": [58, 2, 27, 3],
+  "work": [27, 3, 58, 2]
+};
+
 describe('Weresquirrel', () => {
-  beforeEach(() => {
+  beforeAll(() => {
     for (let entry of journalEntries) {
       journal.addEntry(entry.events, entry.squirrel);
     }
@@ -131,5 +160,9 @@ describe('Weresquirrel', () => {
 
   test('computeEvents works as expected', () => {
     expect(journal.computeEvents()).toStrictEqual(journalEvents);
+  });
+
+  test('computeObservations works as expected', () => {
+    expect(journal.computeObservations()).toStrictEqual(journalObservations);
   });
 });
