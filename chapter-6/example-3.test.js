@@ -15,6 +15,9 @@ test('Constructor prototypes work as expected', () => {
     let goodRabbit = new Rabbit('good');
     let evilRabbit = new Rabbit('evil');
     expect(Object.getPrototypeOf(Rabbit)).toBe(Function.prototype);
+    // The constructor prototype 'extends' Object.prototype and not Function.prototype as one might expect.
+    expect(Object.getPrototypeOf(Rabbit.prototype)).toBe(Object.prototype);
+    expect(Object.getPrototypeOf(function () { }.prototype)).toBe(Object.prototype); // It's the same for all functions.
     expect(Object.getPrototypeOf(goodRabbit)).toBe(Rabbit.prototype);
     expect(Object.getPrototypeOf(evilRabbit)).toBe(Rabbit.prototype);
 });
