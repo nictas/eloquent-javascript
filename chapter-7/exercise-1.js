@@ -10,7 +10,7 @@ const createEmptyIntArray = function (length) {
     return result;
 }
 
-const runPerformanceTest = function (parcelCount = 20, iterations = 1000) {
+const runPerformanceTest = function (extraRobots = [], parcelCount = 20, iterations = 1000) {
     const villageGraph = graph.buildGraph(graph.roads);
 
     const villageRobots = [
@@ -32,6 +32,7 @@ const runPerformanceTest = function (parcelCount = 20, iterations = 1000) {
             "Alice's House",
             "Cabin"]),
         new robots.RouteFindingRobot(),
+        ...extraRobots,
     ];
 
     let actions = createEmptyIntArray(villageRobots.length);
@@ -46,6 +47,8 @@ const runPerformanceTest = function (parcelCount = 20, iterations = 1000) {
         console.log(`${villageRobots[i].constructor.name} did an average of ${actions[i] / iterations} actions to deliver ${parcelCount} parcels.`);
     }
 }
+
+module.exports = runPerformanceTest;
 
 if (require.main === module) {
     runPerformanceTest();

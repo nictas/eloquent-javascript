@@ -38,10 +38,13 @@ const isNullOrEmpty = function (array) {
 
 const runRobot = function (state, robot, maxActions = 1000) {
     let actions = 0, route = [], memory = [];
-    while (state.undeliveredParcels.length != 0 || actions++ > maxActions) {
+    while (actions++ < maxActions && state.undeliveredParcels.length != 0) {
         let action = robot.run(state, memory);
+        if (action.direction == null) {
+            return route;
+        }
         ({ state, memory } = followAction(state, action));
-        if (state.location == action.direction) {
+        if (action.direction == state.location) {
             route.push(action.direction);
         }
     }

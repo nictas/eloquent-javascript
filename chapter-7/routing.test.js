@@ -5,7 +5,7 @@ const villageGraph = new Map();
 villageGraph.set('A', new Set(['B', 'C']));
 villageGraph.set('B', new Set(['A', 'D', 'E']));
 villageGraph.set('C', new Set(['A']));
-villageGraph.set('D', new Set(['B', 'C', 'E']));
+villageGraph.set('D', new Set(['B', 'E']));
 villageGraph.set('E', new Set(['B', 'D']));
 villageGraph.set('F', new Set([]));
 
