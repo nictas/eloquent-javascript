@@ -12,6 +12,9 @@ class Matrix {
     get(x, y) {
         return this.content[x * this.yLimit + y];
     }
+    set(x, y, value) {
+        this.content[x * this.yLimit + y] = value;
+    }
     [Symbol.iterator]() {
         return new MatrixIterator(this);
     }

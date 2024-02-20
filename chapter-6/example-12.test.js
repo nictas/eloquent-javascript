@@ -15,3 +15,15 @@ test('Matrix iterator works as expected', () => {
     expect(logSpy).toHaveBeenNthCalledWith(6, "(1, 2): 5");
     logSpy.mockRestore();
 });
+
+test('Matrix getter and setter work as expected', () => {
+    let i = 0;
+    let matrix = new Matrix(2, 3, (x, y) => i++);
+    expect(matrix.get(0, 2)).toBe(2);
+    matrix.set(0, 2, 8);
+    expect(matrix.get(0, 2)).toBe(8);
+
+    expect(matrix.get(1, 2)).toBe(5);
+    matrix.set(1, 2, 9);
+    expect(matrix.get(1, 2)).toBe(9);
+});
